@@ -34,13 +34,29 @@ export default {
     return {
       projects: [
         {
+          title: 'OJT Boys Yearbook',
+          link: 'https://ojt-boys-yearbook.vercel.app/',
+          image: require('@/assets/ojt-boys-yearbook.png'),
+          description:
+            'A personal yearbook project created to archive the memories, moments, and journey of our college squad — a tribute to our time together.',
+          tags: ['JavaScript', 'CSS', 'HTML', 'Vue', 'Tailwind', 'Git', 'Figma'],
+        },
+        {
           title: 'Quix Core UI Library',
           link: 'https://github.com/frncsvn1030/quix-core-ui-library.git',
           image: require('@/assets/quix.png'),
           description:
             'A custom UI library made to make web design and development easier. It has ready-to-use, reusable components like buttons, forms, cards, and etc. These components help keep designs consistent and speed up the building process.',
-          tags: ['JavaScript', 'HTML', 'SCSS', 'UIKit', 'Git', 'Figma'],
+          tags: ['JavaScript', 'SCSS', 'UIkit', 'Git', 'CSS', 'HTML', 'Figma'],
           disabled: true,
+        },
+        {
+          title: "Capstone Title Generator",
+          link: 'https://capstone-title-generator-vino.netlify.app/',
+          image: require('@/assets/capstone.png'),
+          description:
+            'A smart tool that helps students generate unique and relevant capstone project titles. It provides multiple ideas with short descriptions based on chosen topics.',
+          tags: ['JavaScript', 'SCSS', 'HTML', 'Vue', 'NPM','UIkit'],
         },
         {
           title: "SDLS: A Smart Door Lock System with Attendance and Lab Monitoring for CCA Laboratory",
@@ -48,8 +64,16 @@ export default {
           image: require('@/assets/sdls.png'),
           description:
             'A capstone thesis project designed to enhance the security of CCA’s computer laboratories while streamlining lab management, computer usage monitoring, and student attendance tracking for improved efficiency and accountability.',
-          tags: ['HTML', 'CSS', 'JavaScript', 'PHP', 'React', 'Firebase', 'Node.js', 'NPM', 'Git', 'ESP32', 'Figma'],
+          tags: ['JavaScript', 'PHP', 'CSS', 'HTML', 'ESP32', 'Node', 'Firebase', 'React', 'NPM', 'Git', 'Figma'],
           disabled: true,
+        },
+        {
+          title: "Interactive Assembly Utility Menu (IAUM)",
+          link: 'https://github.com/frncsvn30/interactive-assembly-toolkit.git',
+          image: require('@/assets/assembly.png'),
+          description:
+            'A text-based x86 assembly language project featuring a front page and interactive menu. Includes multiple tools such as string input, alphabet sorting, arithmetic operations, case conversion, and character analysis.',
+          tags: ['Assembly Language', 'x86 Assembly', 'Emu8086'],
         },
       ],
     };

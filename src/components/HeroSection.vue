@@ -40,7 +40,7 @@
 
     <ul class="social-links uk-nav uk-nav-default uk-flex">
       <li>
-        <a href="https://github.com/frncsvn1030" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://github.com/frncsvn30" target="_blank"><i class="fab fa-github"></i></a>
       </li>
       <li>
         <a href="https://linkedin.com/in/francis-loyd-vino-3b5086305" target="_blank"><i class="fab fa-linkedin"></i></a>
@@ -104,6 +104,9 @@
     letter-spacing: -1.8px;
     color: #e5e7eb;
 
+    @media screen and (max-width: 1026px) {
+      font-size: 3rem;
+    }
   }
 
   .title {
@@ -112,6 +115,10 @@
     color: #e5e7eb;
     font-weight: 600;
     margin-bottom: 0.5rem;
+
+    @media screen and (max-width: 1026px) {
+      font-size: 1.2rem;
+    }
   }
 
   .subtitle {
@@ -119,6 +126,10 @@
     line-height: 1.6;
     max-width: 600px;
     margin: 0;
+
+    @media screen and (max-width: 1026px) {
+      font-size: 1rem;
+    }
   }
 
   .social-links {
@@ -136,7 +147,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: #38bdf8;
+        color: #e5e7eb;
       }
     }
   }
@@ -151,6 +162,11 @@
     transition: all 0.2s ease;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @media screen and (max-width: 1026px) {
+      padding: 4px 24px;
+      font-size: .95rem;
+    }
 
     &:hover {
       background: #374151;

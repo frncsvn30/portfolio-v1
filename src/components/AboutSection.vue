@@ -10,7 +10,7 @@
       </p>
 
       <p>
-        I’m currently a <span>Software UI/UX Engineer intern</span> at Qstrike Innovation Phils OPC.
+        I’m currently a <span>Software Engineer intern</span> at Qstrike Innovation Phils OPC.
         I’ve been gaining hands-on experience by working on real projects, contributing to
         interface improvements, and learning how to build and maintain web applications in a
         collaborative environment. I regularly communicate with senior software engineers for
@@ -55,6 +55,10 @@ export default {
 
     p {
       font-size: 1.1rem;
+      
+      @media screen and (max-width: 1026px) {
+        font-size: 1rem;
+      }
     }
 
     p + p {

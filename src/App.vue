@@ -82,8 +82,8 @@ export default {
   }
 
   .hero-fixed {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 
   .main-content {

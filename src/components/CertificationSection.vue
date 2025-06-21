@@ -1,42 +1,62 @@
 <template>
   <section class="cert-section uk-section">
     <h4 class="uk-hidden@m">CERTIFICATIONS</h4>
-    <div class="cert" v-for="(cert, index) in certifications" :key="index">
+
+    <div
+      class="cert"
+      v-for="(cert, index) in visibleCertifications"
+      :key="index"
+    >
       <div class="screenshot">
         <img :src="cert.image" :alt="cert.title" />
       </div>
       <div class="cert-details">
         <div class="title">
-            <template v-if="!cert.disabled">
-                <a :href="cert.link" target="_blank" rel="noopener noreferrer" class="external-link">
-                <h3>{{ cert.title }}
-                  <span uk-icon="icon: link" class="uk-icon"></span>
-                </h3>
-                </a>
-            </template>
-            <template v-else>
-                <h3 class="disabled-link">{{ cert.title }}</h3>
-            </template>
+          <template v-if="!cert.disabled">
+            <a
+              :href="cert.link"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="external-link"
+            >
+              <h3>
+                {{ cert.title }}
+                <span uk-icon="icon: link" class="uk-icon"></span>
+              </h3>
+            </a>
+          </template>
+          <template v-else>
+            <h3 class="disabled-link">{{ cert.title }}</h3>
+          </template>
         </div>
-
 
         <p class="platform">{{ cert.platform }}</p>
 
         <p class="description">{{ cert.description }}</p>
         <div class="tags">
-            <span v-for="(tag, i) in cert.tags" :key="i" class="tag">{{ tag }}</span>
+          <span v-for="(tag, i) in cert.tags" :key="i" class="tag">{{ tag }}</span>
         </div>
       </div>
+    </div>
 
+    <!-- ✅ Move this outside the v-for loop -->
+    <div v-if="certifications.length > 4" class="view-all-btn">
+      <button @click="showAll = !showAll" class="uk-button uk-button-text">
+        {{ showAll ? 'View Less' : 'View Full Certifications' }}
+        <span uk-icon="icon: arrow-right" v-if="!showAll"></span>
+        <span uk-icon="icon: arrow-up" v-else></span>
+      </button>
     </div>
   </section>
 </template>
+
 
 <script>
 export default {
   name: 'CertificationSection',
   data() {
     return {
+      showAll: false,
       certifications: [
         {
             title: 'Craft & Click: Designing Identities and Experiences!',
@@ -79,9 +99,22 @@ export default {
             description: 'A certification introducing the fundamentals of Sass, such as variables, nesting, and partials, to streamline and organize CSS more efficiently.',
             tags: ['Sass Fundamentals'],
         },
+        {
+            title: 'Effective Leadership',
+            platform: 'HP LIFE | 2025',
+            link: 'https://www.life-global.org/certificate/c04f50a9-01b0-40f4-aee2-250c8953c469',
+            image: require('@/assets/certs/hp-leadership.png'),
+            description: 'Learned about leadership styles, team management, dealing with change, and making ethical decisions.',
+            tags: ['Leadership'],
+        },
       ],
     };
   },
+  computed: {
+    visibleCertifications() {
+      return this.showAll ? this.certifications : this.certifications.slice(0, 4);
+    }
+  }
 };
 </script>
 
@@ -143,7 +176,7 @@ export default {
     }
 
     .platform {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: #7f8fa6;
         margin: 0.25rem 0 1rem;
     }
@@ -189,4 +222,26 @@ export default {
     }
   }
 }
+
+.view-all-btn {
+  margin-top: .5rem;
+
+  button {
+    color: #e5e7eb;
+    padding: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      color: #e5e7eb;
+    }
+  }
+}
+
+
 </style>

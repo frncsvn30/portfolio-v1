@@ -42,7 +42,7 @@
       <div class="experience-item">
         <!-- Date Column -->
         <div class="date-column">
-          <p class="date">FEB 2025 – FEB 2025</p>
+          <p class="date">FEB 2025</p>
         </div>
 
         <!-- Main Content -->
@@ -100,6 +100,15 @@
           </div>
         </div>
       </div>
+
+      <div class="view-all-btn uk-container uk-light uk-margin-top">
+        <a href="/my-resume.pdf" target="_blank">
+          <button class="uk-button uk-button-text">
+            View Full Resume
+            <span uk-icon="icon: arrow-right"></span>
+          </button>
+        </a>
+      </div>
     </div>
   </section>
 </template>
@@ -137,7 +146,7 @@ export default {
 
       .date {
         color: #aaa;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         margin: 0;
       }
     }
@@ -164,7 +173,7 @@ export default {
       }
 
       .role {
-        font-size: 1.1rem;
+        font-size: 1rem;
         color: #7f8fa6;
         margin: 0.25rem 0 1rem;
       }
@@ -202,4 +211,24 @@ export default {
     border-bottom: none;
   }
 }
+
+.view-all-btn {
+  margin-top: .5rem !important;
+  button {
+    color: #e5e7eb;
+    padding: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      color: #e5e7eb;
+    }
+  }
+}
+
 </style>

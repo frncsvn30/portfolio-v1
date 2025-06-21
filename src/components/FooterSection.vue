@@ -8,14 +8,16 @@
   </footer>
 </template>
 
-<script setup>
-// No script needed for static content
-</script>
+<script setup></script>
 
 <style scoped>
 .footer {
   font-size: 1.1rem;
   color: #9ca3af94;
+
+  @media screen and (max-width: 1026px) {
+    font-size: 1rem;
+  }
 }
 
 .footer strong {
