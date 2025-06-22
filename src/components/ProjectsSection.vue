@@ -1,7 +1,7 @@
 <template>
   <section class="project-section uk-section">
     <h4 class="uk-hidden@m">PROJECTS</h4>
-    <div class="project" v-for="(project, index) in projects" :key="index">
+    <div class="project" v-for="(project, index) in visibleProjects" :key="index">
       <div class="screenshot">
         <img :src="project.image" :alt="project.title" />
       </div>
@@ -15,8 +15,8 @@
             </a>
           </template>
           <template v-else>
-                <h3 class="disabled-link">{{ project.title }}</h3>
-            </template>
+            <h3 class="disabled-link">{{ project.title }}</h3>
+          </template>
         </div>
         <p class="description">{{ project.description }}</p>
         <div class="tags">
@@ -25,6 +25,17 @@
       </div>
     </div>
   </section>
+
+  <!-- ✅ Move this outside the v-for loop -->
+  <div v-if="projects.length > 4" class="view-all-btn">
+    <button @click="showAll = !showAll" class="uk-button uk-button-text">
+      {{ showAll ? 'View Less' : 'View All Projects' }}
+      <span uk-icon="icon: arrow-right" v-if="!showAll" class="hover-move hover-right">
+      </span>
+      <span uk-icon="icon: arrow-up" v-else class="hover-move hover-up">
+      </span>
+    </button>
+  </div>
 </template>
 
 <script>
@@ -32,6 +43,7 @@ export default {
   name: 'ProjectSection',
   data() {
     return {
+      showAll: false,
       projects: [
         {
           title: 'OJT Boys Yearbook',
@@ -56,7 +68,7 @@ export default {
           image: require('@/assets/capstone.png'),
           description:
             'A smart tool that helps students generate unique and relevant capstone project titles. It provides multiple ideas with short descriptions based on chosen topics.',
-          tags: ['JavaScript', 'SCSS', 'HTML', 'Vue', 'NPM','UIkit'],
+          tags: ['JavaScript', 'SCSS', 'HTML', 'Vue', 'NPM', 'UIkit'],
         },
         {
           title: "SDLS: A Smart Door Lock System with Attendance and Lab Monitoring for CCA Laboratory",
@@ -78,6 +90,11 @@ export default {
       ],
     };
   },
+  computed: {
+    visibleProjects() {
+      return this.showAll ? this.projects : this.projects.slice(0, 4);
+    }
+  }
 };
 </script>
 
@@ -89,7 +106,8 @@ export default {
   margin: 0;
 
   h4 {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     color: #fff;
     font-weight: 600;
   }
@@ -102,6 +120,7 @@ export default {
 
   .screenshot {
     flex-shrink: 0;
+
     img {
       width: 185px;
       height: auto;
@@ -172,6 +191,38 @@ export default {
 
     .screenshot img {
       width: 100%;
+    }
+  }
+}
+
+.view-all-btn {
+  margin-top: .5rem;
+
+  button {
+    color: #e5e7eb;
+    padding: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    &:hover {
+      color: #e5e7eb;
+    }
+
+    .hover-move {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .hover-right {
+      transform: translateX(5px);
+    }
+
+    &:hover .hover-up {
+      transform: translateY(-5px);
     }
   }
 }
