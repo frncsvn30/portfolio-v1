@@ -20,7 +20,8 @@
 
           <p class="description">
             Responsible for contributing to user interface improvements, fixing bugs, and developing new features.
-            I also <strong>communicate regularly with senior software engineers</strong> and <strong>lead a team of interns</strong>
+            I also <strong>communicate regularly with senior software engineers</strong> and <strong>lead a team of
+              interns</strong>
             to ensure tasks are on track and quality standards are met.
           </p>
 
@@ -56,7 +57,8 @@
           <p class="role">Software Developer Intern</p>
 
           <p class="description">
-            Trained as a Software Developer Intern, where I was introduced to the fundamentals of Java and JavaScript and gained early exposure to practical programming concepts and workflows.
+            Trained as a Software Developer Intern, where I was introduced to the fundamentals of Java and JavaScript
+            and gained early exposure to practical programming concepts and workflows.
           </p>
 
           <!-- Tech Stack -->
@@ -88,7 +90,8 @@
           <p class="role">Bachelor of Science in Computer Science Student</p>
 
           <p class="description">
-            Studied core areas of computer science including programming, data structures, algorithms, and web development. Consistently earned Dean’s List honors throughout my academic years.
+            Studied core areas of computer science including programming, data structures, algorithms, and web
+            development. Consistently earned Dean’s List honors throughout my academic years.
           </p>
 
           <!-- Tech Stack -->
@@ -105,7 +108,7 @@
         <a href="/my-resume.pdf" target="_blank">
           <button class="uk-button uk-button-text">
             View Full Resume
-            <span uk-icon="icon: arrow-right"></span>
+            <span uk-icon="icon: arrow-right" class="hover-move hover-right"></span>
           </button>
         </a>
       </div>
@@ -124,7 +127,8 @@ export default {
   margin: 0;
 
   h4 {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
     color: #e5e7eb;
     font-weight: 600;
   }
@@ -139,7 +143,7 @@ export default {
       flex-direction: column;
       gap: .5rem;
     }
-      
+
     .date-column {
       width: 180px;
       flex-shrink: 0;
@@ -214,6 +218,7 @@ export default {
 
 .view-all-btn {
   margin-top: .5rem !important;
+
   button {
     color: #e5e7eb;
     padding: 0.5rem;
@@ -228,7 +233,16 @@ export default {
     &:hover {
       color: #e5e7eb;
     }
+
+    .hover-move {
+      transition: 0.3s ease;
+    }
+
+    &:hover .hover-right {
+      transform: translateX(5px);
+    }
+
+
   }
 }
-
 </style>
