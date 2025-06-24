@@ -29,10 +29,12 @@
           <div class="stack-tags">
             <span class="tag">JavaScript</span>
             <span class="tag">HTML</span>
-            <span class="tag">SCSS</span>
-            <span class="tag">Git</span>
-            <span class="tag">Github</span>
+            <span class="tag">CSS</span>
+            <span class="tag">Sass</span>
             <span class="tag">UIkit</span>
+            <span class="tag">NPM</span>
+            <span class="tag">Git</span>
+            <span class="tag">GitHub</span>
             <span class="tag">Figma</span>
           </div>
         </div>
@@ -98,8 +100,10 @@
           <div class="stack-tags">
             <span class="tag">Programming</span>
             <span class="tag">Wen Design</span>
-            <span class="tag">User Interface Design</span>
-            <span class="tag">User Experience Design</span>
+            <span class="tag">Web Development</span>
+            <span class="tag">Data Science</span>
+            <span class="tag">Data Structures & Algorithms</span>
+            <span class="tag">Computer Architecture</span>
           </div>
         </div>
       </div>

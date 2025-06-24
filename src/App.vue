@@ -2,15 +2,23 @@
   <div id="app">
     <div class="wrapper uk-container uk-container-xlarge uk-flex uk-flex-center">
       <div class="hero-fixed uk-width-2-5 uk-padding-large uk-margin-remove">
-          <HeroSection />
+        <HeroSection />
       </div>
 
       <div class="main-content uk-width-expand uk-padding-large uk-margin-remove">
-          <div id="about"><AboutSection /></div>
-          <div id="experience"><ExperienceSection /></div>
-          <div id="projects"><ProjectsSection /></div>
-          <div id="certifications"><CertificationSection /></div>
-          <FooterSection />
+        <div id="about">
+          <AboutSection />
+        </div>
+        <div id="experience">
+          <ExperienceSection />
+        </div>
+        <div id="projects">
+          <ProjectsSection />
+        </div>
+        <div id="certifications">
+          <CertificationSection />
+        </div>
+        <FooterSection />
       </div>
     </div>
 
@@ -99,11 +107,9 @@ export default {
   height: 100vh;
   pointer-events: none;
   z-index: 9999;
-  background: radial-gradient(
-    circle at var(--x, 50%) var(--y, 50%),
-    rgba(255, 255, 255, 0.03),
-    transparent 550px
-  );
+  background: radial-gradient(circle at var(--x, 50%) var(--y, 50%),
+      rgba(255, 255, 255, 0.03),
+      transparent 550px);
   transition: background 0.05s ease;
 }
 </style>

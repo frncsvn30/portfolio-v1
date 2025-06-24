@@ -1,8 +1,8 @@
 <template>
   <footer class="footer uk-section">
     <p>
-      Coded in <strong>Visual Studio Code</strong> · 
-      Built with <strong>Vue.js & UIkit</strong> · 
+      Coded in <strong>Visual Studio Code</strong> ·
+      Built with <strong>Vue.js & UIkit</strong> ·
       Deployed on <strong>Netlify</strong>
     </p>
   </footer>

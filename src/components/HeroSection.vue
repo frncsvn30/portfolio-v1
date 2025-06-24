@@ -8,7 +8,8 @@
       </p>
 
       <div class="uk-margin-top">
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vinofrancisloyd30@gmail.com&su=Subject&body=Message" target="_blank">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vinofrancisloyd30@gmail.com&su=Subject&body=Message"
+          target="_blank">
           <button class="uk-button uk-margin-small-right">
             <i class="fas fa-envelope uk-margin-xsmall-right"></i> Send Email
           </button>
@@ -24,12 +25,8 @@
 
       <nav class="sidebar-nav uk-visible@m">
         <ul>
-          <li
-            v-for="section in ['about', 'experience', 'projects','certifications']"
-            :key="section"
-            class="nav-item"
-            :class="{ active: activeSection === section }"
-          >
+          <li v-for="section in ['about', 'experience', 'projects', 'certifications']" :key="section" class="nav-item"
+            :class="{ active: activeSection === section }">
             <a :href="'#' + section" uk-scroll>
               {{ section.charAt(0).toUpperCase() + section.slice(1) }}
             </a>
@@ -43,7 +40,8 @@
         <a href="https://github.com/frncsvn30" target="_blank"><i class="fab fa-github"></i></a>
       </li>
       <li>
-        <a href="https://linkedin.com/in/francis-loyd-vino-3b5086305" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://linkedin.com/in/francis-loyd-vino-3b5086305" target="_blank"><i
+            class="fab fa-linkedin"></i></a>
       </li>
       <li>
         <a href="https://instagram.com/flvinonovi" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -56,36 +54,36 @@
 </template>
 
 <script>
-  export default {
-    name: 'HeroSection',
-    data() {
-      return {
-        activeSection: 'about',
-      };
-    },
-    mounted() {
-      window.addEventListener('scroll', this.handleScroll);
-      this.handleScroll(); // trigger once on load
-    },
-    beforeUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
-    },
-    methods: {
-      handleScroll() {
-        const sections = ['about', 'experience', 'projects', 'certifications'];
-        for (let i = 0; i < sections.length; i++) {
-          const section = document.getElementById(sections[i]);
-          if (section) {
-            const rect = section.getBoundingClientRect();
-            if (rect.top <= 100 && rect.bottom >= 100) {
-              this.activeSection = sections[i];
-              break;
-            }
+export default {
+  name: 'HeroSection',
+  data() {
+    return {
+      activeSection: 'about',
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+    this.handleScroll(); // trigger once on load
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const sections = ['about', 'experience', 'projects', 'certifications'];
+      for (let i = 0; i < sections.length; i++) {
+        const section = document.getElementById(sections[i]);
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          if (rect.top <= 100 && rect.bottom >= 100) {
+            this.activeSection = sections[i];
+            break;
           }
         }
       }
     }
-  };
+  }
+};
 </script>
 
 
@@ -110,7 +108,8 @@
   }
 
   .title {
-    padding: 5px 0 5px 0; margin: 0;
+    padding: 5px 0 5px 0;
+    margin: 0;
     font-size: 1.3rem;
     color: #e5e7eb;
     font-weight: 600;
@@ -151,6 +150,7 @@
       }
     }
   }
+
   .uk-button {
     background: #2a313f;
     color: #e5e7eb;
@@ -235,6 +235,4 @@
     }
   }
 }
-
-
 </style>
