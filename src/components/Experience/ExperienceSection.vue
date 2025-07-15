@@ -64,7 +64,7 @@ export default {
              development. Consistently earned Dean’s List honors throughout my academic years.`,
           techStack: [
             'Programming',
-            'Wen Design',
+            'Web Design',
             'Web Development',
             'Data Science',
             'Data Structures & Algorithms',

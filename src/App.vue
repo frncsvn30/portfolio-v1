@@ -31,8 +31,8 @@
 import HeroSection from './components/HeroSection.vue'
 import AboutSection from './components/AboutSection.vue'
 import ExperienceSection from './components/Experience/ExperienceSection.vue'
-import ProjectsSection from './components/ProjectsSection.vue'
-import CertificationSection from './components/CertificationSection.vue'
+import ProjectsSection from './components/Projects/ProjectsSection.vue'
+import CertificationSection from './components/Certifications/CertificationSection.vue'
 import FooterSection from './components/FooterSection.vue'
 
 export default {
