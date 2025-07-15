@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import ExperienceItem from './ExperienceItem.vue';
+import ExperienceItem from '../Experience/ExperienceItem.vue';
 
 export default {
   name: 'ExperienceSection',
